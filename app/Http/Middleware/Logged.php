@@ -20,6 +20,6 @@ class Logged
             return $next($request);
         }
 
-        return redirect()->route('pages.login')->with('error', 'Já tens a sessão iniciada!');
+        return redirect()->route('pages.index')->with('error', 'Já tens a sessão iniciada!');
     }
 }
