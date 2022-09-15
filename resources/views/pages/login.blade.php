@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-4">
             <form method="post" class="needs-validation form-login"
-            action="{{ route('api.login') }}" novalidate>
+            action="{{ route('pages.login') }}" novalidate>
                 <div class="form-group">
                     <label for="email">E-mail</label>
                     <input id="email" class="form-control"

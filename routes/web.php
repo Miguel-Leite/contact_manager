@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,8 +19,16 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/login', [PagesController::class, 'login'])->name('pages.login');
+Route::post('/login', [AuthController::class, 'login'])->name('pages.login');
 Route::get('/', [PagesController::class, 'index'])->name('pages.index');
 Route::middleware('authContact')->group(function () {
     Route::get('/adicionar', [PagesController::class, 'addContact'])->name('pages.add');
     Route::get('/actualizar/{id}', [PagesController::class, 'updateContact'])->name('pages.update');
+    Route::get('/sair', [AuthController::class, 'logout'])->name('pages.logout');
+});
+
+Route::middleware('authContactApi')->group(function () {
+    Route::post('/adicionar', [ContactController::class, 'store'])->name('api.add');
+    Route::put('/actualizar/{id}', [ContactController::class, 'update'])->name('api.update');
+    Route::delete('/remover/{id}', [ContactController::class, 'destroy'])->name('api.delete');
 });

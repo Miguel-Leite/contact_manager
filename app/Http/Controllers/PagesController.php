@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
     public function index()
     {
-        dd(auth()->check());
+        // dd(auth()->check());
         $contacts = Contact::all();
 
         return view('pages.index', compact('contacts'));

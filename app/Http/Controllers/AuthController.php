@@ -31,6 +31,6 @@ class AuthController extends Controller
 
         Auth::logout();
 
-        return redirect()->route('pages.index');
+        return redirect()->route('pages.index')->with('info', 'Sessão terminada com exito.');
     }
 }
