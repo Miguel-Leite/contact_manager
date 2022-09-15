@@ -26,12 +26,14 @@
                 <td>{{ $contact->email }}</td>
                 <td class="float-right">
                     <span class="actionCust mx-2">
-                        <a href="javascript:;" class="btn-success text-white" title="Editar" data-endpoint="">
+                        <a href="{{ route('pages.update',$contact->id) }}" class="btn-success text-white" title="Editar" data-endpoint="">
                             <i class="fas fa-pen text-white" aria-hidden="true"></i>
                         </a>
                     </span>
                     <span class="actionCust mx-2">
-                        <a href="javascript:;" class="btn-danger btn-delete" title="Apagar" data-endpoint=""> <i
+                        <a href="javascript:;"
+                        data-endpoint-delete="{{ route('api.delete',$contact->id) }}"
+                        class="btn-danger btn-delete" title="Apagar"> <i
                                 class="fas fa-trash text-white"></i> </a>
                     </span>
                 </td>

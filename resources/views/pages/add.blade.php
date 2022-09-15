@@ -3,7 +3,7 @@
     <h4 class="title">Adicionar novo contacto</h4>
     <div class="row justify-content-center">
         <div class="col-10">
-            <form action="{{ route('pages.add') }}" method="post" class="needs-validation form-schools" novalidate>
+            <form action="{{ route('api.add') }}" method="post" class="needs-validation form-add" novalidate>
                 <div class="page-indicator"></div>
                 @csrf
                 <div class="form-group">
