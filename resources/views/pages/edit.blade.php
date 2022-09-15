@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <h4 class="title">Adicionar novo contacto</h4>
+    <h4 class="title">Editar contacto</h4>
     <div class="row justify-content-center">
         <div class="col-10">
             <form action="{{ route('pages.add') }}" method="post" class="needs-validation form-schools" novalidate>
@@ -33,7 +33,8 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-purple btn-add col-12"> <i class="fa fa-user-plus" aria-hidden="true"></i> Adicionar</button>
+                <button type="submit" class="btn btn-purple col-12"> <i class="fas fa-edit    "></i> Actualizar</button>
+                <button type="button" class="btn btn-danger btn-edit col-12"> <i class="fa fa-trash" aria-hidden="true"></i> Apagar</button>
             </form>
         </div>
     </div>

@@ -15,4 +15,9 @@ class PagesController extends Controller
     {
         return view('pages.add');
     }
+
+    public function updateContact()
+    {
+        return view('pages.edit');
+    }
 }

@@ -45,7 +45,7 @@
                             <a class="nav-link" href="{{ route('pages.index') }}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Instituições</a>
+                            <a class="nav-link" href="{{ route('pages.add') }}">Novo contacto</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
