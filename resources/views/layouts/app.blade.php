@@ -20,6 +20,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('pages.add') }}">Novo contacto</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('pages.logout') }}">Sair</a>
+                        </li>
                         @else
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('pages.login') }}">Entrar</a>
