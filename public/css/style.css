@@ -11,6 +11,7 @@
     --dark-2: #272727;
     --dark-3: #303030;
     --dark-4: #424242;
+    --dark-5: #4b4b4b;
     --light-1: #bebebe;
     --text-1: #adadad;
 }
@@ -243,4 +244,20 @@ footer {
     padding: 30px 0px 20px 0px;
     background-color: var(--dark-2);
     border-top: 2px solid var(--dark-3);
+}
+
+.form-login {
+    width: 100%;
+    height: auto;
+    background-color: var(--dark-3) !important;
+    padding: 40px 20px;
+    border-radius: 5px;
+    margin: 100px auto 0px auto;
+    border: 1px solid var(--dark-4);
+}
+
+.form-login .form-control {
+    background-color: var(--dark-4) !important;
+    border-color: var(--dark-5) !important;
+    padding: 20px 15px !important;
 }
