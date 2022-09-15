@@ -42,18 +42,11 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('pages.index') }}">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ route('pages.index') }}">Home <span
+                                    class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('pages.add') }}">Novo contacto</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false"> <i class="fa fa-user" aria-hidden="true"></i> Perfil</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                <a class="dropdown-item" href="#">Editar</a>
-                                <a class="dropdown-item" href="#">Sair</a>
-                            </div>
                         </li>
                     </ul>
                 </div>
@@ -93,7 +86,27 @@
     {{-- axios --}}
     <script src="{{ asset('vendor/axios/axios.min.js') }}"></script>
 
-    <script src="{{ asset('js/admin/main.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#dataTable').DataTable({
+                "oLanguage": {
+                    "sLengthMenu": "Mostrar _MENU_ registros por página",
+                    "sZeroRecords": "Nenhum registro encontrado",
+                    "sInfo": "Mostrando _START_ / _END_ de _TOTAL_ registro(s)",
+                    "sInfoEmpty": "Mostrando 0 / 0 de 0 registros",
+                    "sInfoFiltered": "(filtrado de _MAX_ registros)",
+                    "sSearch": "Pesquisar: ",
+                    "oPaginate": {
+                        "sFirst": "Início",
+                        "sPrevious": "Anterior",
+                        "sNext": "Próximo",
+                        "sLast": "Último"
+                    }
+                }
+            });
+        });
+    </script>
     @yield('script-bottom')
 </body>
 

@@ -19,10 +19,11 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($contacts as $contact)
             <tr>
-                <td>Miguel Leite</td>
-                <td>+244941398739</td>
-                <td>miguelleite200leite@gmail.com</td>
+                <td>{{ $contact->name }}</td>
+                <td>{{ $contact->contact }}</td>
+                <td>{{ $contact->email }}</td>
                 <td class="float-right">
                     <span class="actionCust mx-2">
                         <a href="javascript:;" class="btn-success text-white" title="Editar" data-endpoint="">
@@ -35,6 +36,7 @@
                     </span>
                 </td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 @endsection
