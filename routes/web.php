@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/', [PagesController::class, 'index'])->name('pages.index');
 Route::middleware('logged')->group(function () {
     Route::get('/login', [PagesController::class, 'login'])->name('pages.login');
     Route::post('/login', [AuthController::class, 'login'])->name('pages.login');
