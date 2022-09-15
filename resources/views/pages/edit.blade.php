@@ -35,10 +35,9 @@
 
                 <button type="submit" class="btn btn-purple btn-exec btn-edit col-12"> <i class="fas fa-edit    "></i>
                     Actualizar</button>
-                <button type="button"
-                data-endpoint-delete="{{ route('api.delete',$contact->id) }}"
-                class="btn btn-danger btn-edit btn-delete col-12"> <i class="fa fa-trash"
-                        aria-hidden="true"></i> Apagar</button>
+                <button type="button" data-endpoint-delete="{{ route('api.delete', $contact->id) }}"
+                    class="btn btn-danger btn-edit btn-delete col-12"> <i class="fa fa-trash" aria-hidden="true"></i>
+                    Apagar</button>
             </form>
         </div>
     </div>
@@ -81,11 +80,43 @@
                     position: 'topCenter'
                 });
             } else {
-                iziToast.error({
-                    title: 'Falha ao registrar: ',
-                    message: data.message,
-                    position: 'topCenter'
-                });
+                if (typeof data.message !== 'string') {
+                    if (data.message.name) {
+                        for (let index = 0; index < data.message.name.length; index++) {
+                            iziToast.error({
+                                title: 'Falha ao registrar: ',
+                                message: data.message.name[index],
+                                position: 'topCenter'
+                            });
+                        }
+                    }
+
+                    if (data.message.email) {
+                        for (let index = 0; index < data.message.email.length; index++) {
+                            iziToast.error({
+                                title: 'Falha ao registrar: ',
+                                message: data.message.email[index],
+                                position: 'topCenter'
+                            });
+                        }
+                    }
+
+                    if (data.message.contact) {
+                        for (let index = 0; index < data.message.contact.length; index++) {
+                            iziToast.error({
+                                title: 'Falha ao registrar: ',
+                                message: data.message.contact[index],
+                                position: 'topCenter'
+                            });
+                        }
+                    }
+                } else {
+                    iziToast.error({
+                        title: 'Falha ao registrar: ',
+                        message: data.message,
+                        position: 'topCenter'
+                    });
+                }
             }
 
         })
