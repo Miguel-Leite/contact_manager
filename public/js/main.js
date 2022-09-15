@@ -69,3 +69,33 @@ if (document.querySelector('.form-add')) {
         }
     })
 }
+
+if (document.querySelector('form-login')) {
+    const formLogin = document.querySelector('form-login')
+
+    formLogin.addEventListener('submit', async(e) => {
+        e.preventDefault();
+        const fd = new FormData(e.currentTarget);
+        const { data, status } = await axios.post(formLogin.action, fd);
+
+        if (data.success) {
+            iziToast.success({
+                title: 'Sucesso!',
+                message: data.message,
+                position: 'topRight'
+            });
+            formLogin.classList.remove('needs-validation')
+            formLogin.classList.remove('was-validated')
+            formLogin.reset();
+            setTimeout(() => {
+                location.assign("/")
+            }, 3000)
+        } else {
+            iziToast.error({
+                title: 'Falha na autenticação!',
+                message: data.message,
+                position: 'topRight'
+            });
+        }
+    })
+}
