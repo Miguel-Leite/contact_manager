@@ -13,6 +13,11 @@ class PagesController extends Controller
         return view('pages.index', compact('contacts'));
     }
 
+    public function login()
+    {
+        return view('pages.login');
+    }
+
     public function addContact()
     {
         return view('pages.add');

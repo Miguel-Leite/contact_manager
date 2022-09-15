@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
+Route::get('/login', [PagesController::class, 'login'])->name('pages.login');
 Route::get('/', [PagesController::class, 'index'])->name('pages.index');
-Route::get('/adicionar', [PagesController::class, 'addContact'])->name('pages.add');
-Route::get('/actualizar/{id}', [PagesController::class, 'updateContact'])->name('pages.update');
+Route::middleware('authContact')->group(function () {
+    Route::get('/adicionar', [PagesController::class, 'addContact'])->name('pages.add');
+    Route::get('/actualizar/{id}', [PagesController::class, 'updateContact'])->name('pages.update');
+});

@@ -20,6 +20,6 @@ class AuthContact
             return $next($request);
         }
 
-        return redirect()->route('pages.index')->with('message', 'Não tens permissão de aceder esta página!');
+        return redirect()->route('pages.login')->with('message', 'Não tens permissão de aceder esta página!');
     }
 }

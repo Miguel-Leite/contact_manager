@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+@section('data')
     <h4 class="title">Editar contacto</h4>
     <div class="row justify-content-center">
         <div class="col-10">
