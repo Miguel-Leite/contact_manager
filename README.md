@@ -14,10 +14,10 @@
 - Roda o seguinte comando para criar um usuario administrator: ``` php artisan user:create ```
 - Roda o seguinte comando para inicializar aplicação: ``` php artisan serve ```
 ### Funcionalidades da aplicação
-- [x] Listar todos contactoa
+- [x] Listar todos contactos
 - [x] Criação de novo contacto
 - [x] Actualização do contacto
-- [x] Deleção do contacto
+- [x] Deleção do contacto (Caso o contacto existe)
 
 ### Apresentação da aplicação
 
