@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Contact;
 
 class PagesController extends Controller
 {
     public function index()
     {
-        return view('pages.index');
+        $contacts = Contact::all();
+
+        return view('pages.index', compact('contacts'));
     }
 
     public function addContact()
@@ -16,8 +18,10 @@ class PagesController extends Controller
         return view('pages.add');
     }
 
-    public function updateContact()
+    public function updateContact($id)
     {
-        return view('pages.edit');
+        $contact = Contact::find($id);
+
+        return view('pages.edit', compact('contact'));
     }
 }
