@@ -61,11 +61,44 @@ if (document.querySelector('.form-add')) {
             });
             form.reset()
         } else {
-            iziToast.error({
-                title: 'Falha ao registrar: ',
-                message: data.message,
-                position: 'topCenter'
-            });
+            if (typeof data.message !== 'string') {
+                if (data.message.name) {
+                    for (let index = 0; index < data.message.name.length; index++) {
+                        iziToast.error({
+                            title: 'Falha ao registrar: ',
+                            message: data.message.name[index],
+                            position: 'topCenter'
+                        });
+                    }
+                }
+
+                if (data.message.email) {
+                    for (let index = 0; index < data.message.email.length; index++) {
+                        iziToast.error({
+                            title: 'Falha ao registrar: ',
+                            message: data.message.email[index],
+                            position: 'topCenter'
+                        });
+                    }
+                }
+
+                if (data.message.contact) {
+                    for (let index = 0; index < data.message.contact.length; index++) {
+                        iziToast.error({
+                            title: 'Falha ao registrar: ',
+                            message: data.message.contact[index],
+                            position: 'topCenter'
+                        });
+                    }
+                }
+            } else {
+                iziToast.error({
+                    title: 'Falha ao registrar: ',
+                    message: data.message,
+                    position: 'topCenter'
+                });
+            }
+
         }
     })
 }

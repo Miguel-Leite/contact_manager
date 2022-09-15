@@ -20,25 +20,17 @@ class ContactController extends Controller
         try {
             $validator = Validator::make($request->all(), [
                 'name' => 'required|max:50',
-                'email' => 'required|unique:users,email',
+                'email' => 'required',
                 'contact' => 'required|unique:contacts,contact',
             ], [
-                'name' => [
-                'required' => 'Campo nome é obrigatŕio.',
-                'max' => 'Nome deve ter no minimo 50 caracteres.', ],
-                'email' => [
-                    'required' => 'Campo e-mail é obrigatŕio.',
-                    'unique' => 'Este e-mail já esta registrado no sistema.',
-                ],
-                'contact' => [
-                    'required' => 'Campo e-mail é obrigatŕio.',
-                    'unique' => 'Este contacto já esta registrado no sistema.',
-                ],
+                'max' => 'O nome deve ter no maximo 50 caracteres.',
+                'required' => 'Campo :attribute é obrigatŕio.',
+                'unique' => 'Este contacto já esta registrado no sistema.',
             ]);
 
             if ($validator->fails()) {
                 return response()->json([
-                    'success' => true,
+                    'success' => false,
                     'message' => $validator->errors(),
                 ], 201);
             }
