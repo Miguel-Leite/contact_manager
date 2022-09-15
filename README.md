@@ -3,10 +3,10 @@
 <p>Contact Manager é uma aplicação de gerêncimento de contactos, é um teste que me foi dado pela empresa AlfaSofware.</p>
 
 ### Funcionalidades da aplicação
-[x]Listar todos contactoa
-[x]Criação de novo contacto
-[x]Actualização do contacto
-[x]Deleção do contacto
+- [x] Listar todos contactoa
+- [x] Criação de novo contacto
+- [x] Actualização do contacto
+- [x] Deleção do contacto
 
 ### Apresentação da aplicação
 
