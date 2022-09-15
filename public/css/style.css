@@ -1,0 +1,284 @@
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-1: #1d1d1d;
+    --dark-2: #272727;
+    --dark-3: #303030;
+    --dark-4: #424242;
+    --light-1: #bebebe;
+    --text-1: #adadad;
+}
+
+body {
+    background-color: var(--dark-1) !important;
+    color: var(--light-1) !important;
+}
+.bg-dark-4 {
+    background-color: var(--dark-4) !important;
+}
+.title{
+    color: var(--text-1);
+    font-weight: 700 !important;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--dark-3);
+}
+
+
+.btn-purple {
+    background-color: var(--purple) !important;
+    color: var(--light) !important;
+}
+.btn-previous {
+    background-color: var(--dark-3) !important;
+    border: 1px solid var(--dark-4) !important;
+    color: var(--light-1) !important;
+}
+.page-indicator {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+.page-indicator em {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: var(--dark-3);
+    padding: 10px;
+    border: 1px solid var(--dark-4);
+    border-radius: 500%;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.page-indicator em:nth-child(1):after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -108%;
+    width: 90%;
+    height: 2px;
+    border: 1px dashed var(--dark-4);
+}
+.page-indicator em.cur-page {
+    background-color: var(--purple);
+}
+form .step  {
+    display: none;
+}
+form .step h3 {
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+form .step.page-active  {
+    display: block !important;
+}
+.form-control {
+    background-color: var(--dark-3) !important;
+    color: var(--light-1) !important;
+    border-color: var(--dark-4) !important;
+}
+.form-input-file {
+    height: 50px !important;
+    padding-top: 10px !important;
+}
+.form-input-text {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    outline: none;
+}
+.controls-submit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 40px;
+}
+.controls-submit .btn {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+.modal-header .close {
+    color: var(--light-1) !important;
+}
+.modal-content {
+    background-color: var(--dark-2) !important;
+    border-color: var(--dark-3) !important;
+}
+.modal-header,
+.modal-body,
+.modal-footer {
+    border-color: var(--dark-3) !important;
+}
+.table thead th {
+    border-color: var(--dark-3) !important;
+    color: var(--light-1) !important;
+}
+.table td, .table th {
+    border-color: var(--dark-3) !important;
+}
+.table td {
+    color: var(--light-1) !important;
+}
+.table.no-footer {
+    border-bottom: 1px solid var(--dark-4);
+}
+.table.cust-datatable thead {
+    background-color: #f9f9f9;
+}
+.table.cust-datatable >thead>tr>th {
+    border-bottom-width: 0;
+    color: var(--light-1) !important;
+    font-weight: 600;
+    padding: 16px 15px;
+    vertical-align: middle;
+    padding-left: 18px;
+    text-align: center;
+}
+.table.cust-datatable > tbody td{
+    padding: 10px 15px 10px 18px;
+    color: var(--text-1) !important;
+    font-size: 13px;
+    font-weight: 500;
+    word-break: break-word;
+    border-color: var(--dark-3) !important;
+    text-align: center;
+    vertical-align: middle;
+}
+.table.cust-datatable >tbody tr {
+    border-top: none;
+}
+.table.cust-datatable >tbody >tr:nth-child(even) {
+    background-color: var(--dark-3);
+}
+.btn-group.open .dropdown-toggle{
+    box-shadow: none;
+}
+.table .dropdown_icon {
+    display: inline-block;
+    color: #8a8a8a;
+    font-size: 12px;
+    border: 1px solid #d4d4d4;
+    padding: 10px 11px;
+    border-radius: 500%;
+    cursor: pointer;
+}
+.table .dropdown-menu {
+    padding: 0;
+    border-radius: 4px;
+    margin-top: 10px;
+    left: -65px;
+    top: 32px;
+    box-shadow: 0px 0px 25px #d4d4d4;
+    border: 0;
+}
+div.dataTables_wrapper div.dataTables_paginate .page-link {
+    color: var(--light) !important;
+    background-color: var(--dark-2) !important;
+    border-color: var(--dark-3) !important;
+    border-radius: 40px;
+    margin: 5px 3px;
+}
+div.dataTables_wrapper div.dataTables_paginate .page-link:hover {
+    color: var(--light) !important;
+    border: 1px solid var(--purple) !important;
+    background-color: var(--indigo) !important;
+    box-shadow: none;
+}
+div.dataTables_wrapper div.dataTables_paginate .paginate_button.active .page-link,
+div.dataTables_wrapper div.dataTables_paginate .paginate_button.active .page-link:hover
+{
+    color: var(--light) !important;
+    border-color: transparent !important;
+    background-color: var(--purple) !important;
+}
+div.dataTables_wrapper div.dataTables_paginate {
+    padding-top: 0 !important;
+    margin: 15px 10px;
+    float: right !important;
+}
+.table .actionCust a {
+    display: inline-block;
+    color: #8a8a8a;
+    font-size: 12px;
+    border: 1px solid var(--dark-3);
+    padding: 10px 11px;
+    margin: -9px 3px;
+    border-radius: 500%;
+    cursor: pointer;
+}
+.table .actionCust a i {
+    color: #8a8a8a;
+    margin: 2px;
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper .navbar {
+    background-color: var(--dark-2);
+    padding: 25px 0px;
+    border-bottom: 2px solid var(--dark-3);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 32px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.navbar-nav {
+    gap: 20px;
+}
+.navbar-nav .dropdown-menu {
+    border: 0;
+    padding: 20px 0px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.158);
+    background-color: var(--dark-2);
+    border: 1px solid var(--dark-3);
+    margin-top: 20px;
+}
+.dropdown-item{
+    color: var(--secondary) !important;
+    border-bottom: 1px solid var(--dark-3) !important;
+}
+.dropdown-item:hover {
+    background-color: var(--dark-1) !important;
+    color: var(--light) !important;
+}
+.wrapper .content
+{
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border: 1px solid var(--dark-3);
+    background-color: var(--dark-2);
+}
+
+footer {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    padding: 30px 0px 20px 0px;
+    background-color: var(--dark-2);
+    border-top: 2px solid var(--dark-3);
+}
