@@ -10,14 +10,13 @@
 
 ### Apresentação da aplicação
 
-Tela inicial (Usuário autenticado / Usuário não autenticado)
-<img src="home.png" width="200" />
+<p>Tela inicial (Usuário autenticado / Usuário não autenticado)</p>
+<img src="home.png" />
+<p>Tela de login</p>
+<img src="login.png" />
 
-Tela de login
-<img src="login.png" width="200" />
+<p>Tela para listar contacto (Usuário autenticado)</p>
+<img src="contact-auth.png" />
 
-Tela para listar contacto (Usuário autenticado)
-<img src="contact-auth.png" width="200" />
-
-Tela para adicionar contact (Usuário autenticado)
-<img src="add.png" width="200" />
+<p>Tela para adicionar contact (Usuário autenticado)</p>
+<img src="add.png" />
