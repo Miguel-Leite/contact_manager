@@ -26,7 +26,7 @@
 
                 <div class="form-group">
                     <label for="contact">E-mail </label><span class="text-danger">*</span>
-                    <input type="text" name="email" id="email" value="{{ $contact->email }}"
+                    <input type="email" name="email" id="email" value="{{ $contact->email }}"
                         class="form-control form-input-text" placeholder="Endereço e-mail" required>
                     <div class="invalid-feedback">
                         Por favor preencha este campo é obrigatório

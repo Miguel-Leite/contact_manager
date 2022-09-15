@@ -35,11 +35,12 @@ class ContactController extends Controller
     {
         try {
             if ($contact = $this->instance->find($id)) {
-                $contact->update($request->all());
+                $data = $request->all();
+                $contact->update($data);
 
                 return response()->json([
                     'success' => true,
-                    'message' => 'Contacto actualizado com sucesso!',
+                    'message' => "Contacto de {$contact->name} actualizado com sucesso!",
                 ], 200);
             }
 
