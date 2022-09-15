@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/adicionar', [ContactController::class, 'store'])->name('api.add');
+Route::put('/actualizar/{id}', [ContactController::class, 'update'])->name('api.update');
+Route::delete('/remover/{id}', [ContactController::class, 'destroy'])->name('api.delete');
