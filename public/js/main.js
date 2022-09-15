@@ -70,9 +70,9 @@ if (document.querySelector('.form-add')) {
     })
 }
 
-if (document.querySelector('form-login')) {
-    const formLogin = document.querySelector('form-login')
-
+if (document.querySelector('.form-login')) {
+    const formLogin = document.querySelector('.form-login')
+    console.log(formLogin)
     formLogin.addEventListener('submit', async(e) => {
         e.preventDefault();
         const fd = new FormData(e.currentTarget);
