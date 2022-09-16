@@ -3,9 +3,7 @@
 <p>Contact Manager é uma aplicação de gerêncimento de contactos, é um teste que me foi dado pela empresa AlfaSofware.</p>
 
 ### Como rodar o projecto
-<p>Para rodar o projecto na sua máquina, primeiramente deves renomear o arquivo
-
-```.env-example``` para ```.env```. Em seguida segui o passos abaixo:</p>
+<p>Para rodar o projecto na sua máquina, primeiramente deves fazer o clone do repositório na sua máquina em seguida renomear o arquivo ```.env-example``` para ```.env```. Em seguida segui o passos abaixo:</p>
 
 - Roda o seguinte comando no terminal na raíz do projecto: ``` php artisan key:generate ```(caso ainda não foi criada a chave)
 - Abri o arquivo ```.env``` e procura a váriavel ***DB_DATABASE*** e atribuir o nome da base de dados(primeiro tens de criar  base de dados).

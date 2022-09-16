@@ -46,7 +46,7 @@
 
     <footer>
         <div class="container">
-            <p> Copyright &copy; Todos os directos reservados - Sistema de Pagamento Escolar </p>
+            <p> Copyright &copy; Todos os directos reservados - Miguel Leite </p>
         </div>
     </footer>
 @endsection
